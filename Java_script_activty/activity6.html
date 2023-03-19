@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Check for Anagrams</title>
+</head>
+<body>
+    <script>
+        /*
+        6-Replace All Occurrences of a Substring in a String: Write a function that takes a
+        string, a substring, and a replacement string as input, and returns the same string
+        with all occurrences of the substring replaced with the replacement string.
+        */
+        function replaceAllOccurrences(str, substr, replacement) {
+        return str.split(substr).join(replacement);
+       }
+
+       // Example usage
+           let originalStr ="The quick brown fox jumps over a lazy dog.";
+          let newStr = replaceAllOccurrences(originalStr, "the", "a"); // Returns "The quick brown fox jumps over a lazy dog."
+
+
+    </script>
+</body>
+</html>

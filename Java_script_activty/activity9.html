@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check for Anagrams</title>
+</head>
+<body>
+    <script>
+        /*
+        9. Format a Time Duration: Write a function that takes a time duration (in seconds) as
+         input and returns a formatted string in the format of "X hours, Y minutes, Z
+        seconds".
+       */
+       function formatDuration(seconds) {
+             let hours = Math.floor(seconds / 3600);
+             let minutes = Math.floor((seconds % 3600) / 60);
+             let remainingSeconds = seconds % 60;
+ 
+             let result = "";
+                   if (hours > 0) {
+                      result += hours + " hours, ";
+                    }
+                   if (minutes > 0) {
+                     result += minutes + " minutes, ";
+                    }
+                   if (remainingSeconds > 0) {
+                     result += remainingSeconds + " seconds";
+                    }
+                   if (result === "") {
+                     result = "0 seconds";
+                      }
+ 
+                       return result;
+             }
+
+             console.log(formatDuration(3662)); // Output: "1 hours, 1 minutes, 2 seconds"
+             console.log(formatDuration(120)); // Output: "2 minutes"
+             console.log(formatDuration(0)); // Output: "0 seconds"
+    </script>
+</body>
+</html>

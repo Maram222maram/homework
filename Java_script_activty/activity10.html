@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check for Anagrams</title>
+</head>
+<body>
+    <script>
+        /*
+        10-Convert a String to CamelCase: Write a function that takes a string as input and
+            returns the same string in CamelCase (meaning each word is capitalized except for
+           the first word).
+           */
+
+           function toCamelCase(str) {
+           return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+           return index == 0 ? word.toLowerCase() : word.toUpperCase();
+           }).replace(/\s+/g, '');
+           }
+           const myString = "this is a sample string";
+           const myCamelCaseString = toCamelCase(myString);
+           console.log(myCamelCaseString); // outputs "thisIsASampleString"
+    </script>
+    
+</body>
+</html>

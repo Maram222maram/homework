@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check for Anagrams</title>
+</head>
+<body>
+    <script>
+        /*4-Calculate the Age Based on a Date of Birth: Write a function that takes a date of
+          *birth as input and returns the age of the person as of today.
+          */
+          function calculateAge(dateOfBirth) {
+             const now = new Date();
+              const birthDate = new Date(dateOfBirth);
+              const yearsDiff = now.getFullYear() - birthDate.getFullYear();
+              const monthsDiff = now.getMonth() - birthDate.getMonth();
+                 if (monthsDiff < 0 || (monthsDiff === 0 && now.getDate() < birthDate.getDate())) {
+                     return yearsDiff - 1;
+         }
+               return yearsDiff;
+           }
+
+     // Example usage
+             const maram = "2001-10-16";  
+             const age = calculateAge(maram);  
+ 
+    </script>
+</body>
+</html>
